@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8">
+<title>Servicos</title>
+<link rel="stylesheet" href="../css/resources/bootstrap/bootstrap.min.css" />
+<link rel="stylesheet" href="../css/resources/humane/jackedup.css" />
+<link rel="stylesheet" href="../css/resources/ngDialog/ngDialog.css" />
+<link rel="stylesheet" href="../css/resources/ngDialog/ngDialog-theme-default.css" />
+
+<link rel="stylesheet" href="../css/styles.css" />
+
+<style>
+[ng-cloak] {
+	display: none;
+}
+</style>
+
+</head>
+<body data-ng-app="appOS">
+<!--
+	<nav class="navbar navbar-default navbar-fixed-top">
+	<div class="container">
+		 Brand and toggle get grouped for better mobile display
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed"
+				data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+				aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span> <span
+					class="icon-bar"></span> <span class="icon-bar"></span> <span
+					class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#/">Servicos</a>
+		</div>
+
+		<! Collect the nav links, forms, and other content for toggling
+		<div class="collapse navbar-collapse"
+			id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav">
+				<li><a  data-ng-controller="servicoNewController" data-ng-click="openModalCadasro()">Novo Serviço</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+-->
+  <div ng-include="'template/top.html'"></div>
+
+	<div data-ng-view class="container animated fadeIn" style="margin-top: 100px;"></div>
+
+	<div ng-include="'template/bottom.html'"></div>
+
+	<script src="../js/resources/jQuery/jquery.js"></script>
+	<script src="../js/resources/humane/humanejs.min.js"></script>
+	<script src="../js/resources/bootstrap/bootstrap.min.js"></script>
+	<script src="../js/resources/angular/angular.js"></script>
+	<script src="../js/resources/angular/angular-route.min.js"></script>
+	<script src="../js/resources/ngDialog/ngDialog.js"></script>
+	<script src="../js/resources/pagination/dirPagination.js"></script>
+	<script src="../js/resources/angular/angular-animate.min.js"></script>
+
+
+	<script src="../js/app1.js"></script>
+	<script src="../js/controllers1.js"></script>
+	<script src="../js/restService.js"></script>
+	<script src="../js/services1.js"></script>
+	<script src="../js/fadeInDirective.js"></script>
+</body>
+</html>

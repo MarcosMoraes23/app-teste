@@ -1,0 +1,34 @@
+<div class="container">
+  <h1>Servico detail</h1>
+
+  <form novalidate="novalidate" class="form-horizontal">
+    <div class="control-group">
+      <label class="control-label" for="idServico">Id:</label>
+
+      <div class="controls">
+        <input type="text" id="idServico" ng-model="servico.id"/>
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label" for="descricao">Descrição:</label>
+
+      <div class="controls">
+        <input type="text" id="descricao" ng-model="servico.descricao"/>
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label" for="valorServico">Valor:</label>
+
+      <div class="controls">
+        <input type="text" id="valorServico" ng-model="servico.valorServico"/>
+      </div>
+    </div>
+    
+    <div class="control-group">
+      <div class="controls">
+        <a ng-click="cancel()" class="btn btn-small">cancel</a>
+        <a ng-click="updateServico()" class="btn btn-small btn-primary">update</a>
+      </div>
+    </div>
+  </form>
+</div>

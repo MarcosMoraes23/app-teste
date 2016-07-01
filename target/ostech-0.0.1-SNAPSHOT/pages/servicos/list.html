@@ -1,0 +1,50 @@
+<div class="row" fade-in>
+  <h3 class="page-header" style="margin: 0px 0 30px;">Serviços</h3>
+
+      <form class="form-inline">
+        <div class="form-group col-md-10" style="margin-bottom: 10px; padding-left: 0px;">
+          <label class=" control-label" >Pesquisar: </label>
+          <input size="40" type="text" ng-model="search" class="form-control"  placeholder="Pesquisar">
+
+        </div>
+        <div class="form-group col-md-2">
+          <a  data-ng-controller="servicoNewController" data-ng-click="openModalCadasro()" class="btn btn-small btn-success col-md-8">Novo Serviço</a>
+        </div>
+      </form>
+
+  <table class="table table-striped table-hover">
+    <thead>
+      <tr>
+        <th ng-click="sort('id')">Id
+          <span class="glyphicon sort-icon" ng-show="sortKey=='id'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+        </th>
+        <th ng-click="sort('descricao')">Descrição
+          <span class="glyphicon sort-icon" ng-show="sortKey=='descricao'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+        </th>
+        <th ng-click="sort('last_name')">Valor
+          <span class="glyphicon sort-icon" ng-show="sortKey=='last_name'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+        </th>
+        <th>
+          Action
+        </th>
+        <th>
+          Action
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr  class="animate-repeat" dir-paginate="servico in servicoService.servicos|orderBy:sortKey:reverse|filter:search|itemsPerPage:5">
+        <td>{{servico.id}}</td>
+        <td>{{servico.descricao}}</td>
+        <td>{{servico.valorServico}}</td>
+        <td>
+          <a data-ng-click="openModalEditar(servico)" class="btn btn-small btn-primary">Editar</a>
+        </td>
+        <td>
+          <a data-ng-click="deletarServico(servico)" class="btn btn-small btn-danger">Deletar</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <dir-pagination-controls max-size="5" direction-links="true" boundary-links="true"></dir-pagination-controls>
+</div>

@@ -1,0 +1,15 @@
+<a ng-click="createNewServico()" class="btn btn-small">create new Servico</a>
+<table class="table">
+    <tr>
+        <td><h3>All Services</h3></td>
+        <td></td>
+    </tr>
+    <tr ng-repeat= "servico in servicos">
+		<td>{{servico.id}}</td>
+		<td>{{servico.descricao}}</td>
+		<td>{{servico.valorServico}}</td>
+    <td><a ng-click="editServico(servico.id)" class="btn btn-small btn-primary">edit</a></td>
+    <td><a ng-click="deleteServico(servico.id)" class="btn btn-small btn-danger">delete</a></td>
+	</tr>
+    
+</table>

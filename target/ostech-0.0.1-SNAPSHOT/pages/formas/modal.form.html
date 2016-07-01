@@ -1,0 +1,21 @@
+
+<form>
+<h4><b>Forma de Pagamento</b></h4>
+<hr style= "border-color: #0B0A0A;">
+	<div class="form-group">
+		<label for="descricao">Descrição:</label>
+		<input type="text" class="form-control input-sm" id="descricao"   placeholder="Descrição..." ng-model="forma.descricao">
+	</div>
+
+	<div class="form-group">
+		<label for="obs">Observação:</label>
+		<input type="text" class="form-control input-sm" id="obs" placeholder="Observação..."	ng-model="forma.obs">
+	</div>
+	<button type="submit" class="btn btn-primary" 	data-ng-click="salvar(forma, files[0]); progress = !progress ; closeThisDialog()"
+		show ="!show" ng-disabled="progress">
+		<span data-ng-show="progress" class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span>
+		<span ng-show="!progressFoto">Confirmar</span>
+
+	</button>
+	<button type="submit" class="btn btn-danger" data-ng-click="closeThisDialog()" ng-disabled="progress">Cancelar</button>
+</form>

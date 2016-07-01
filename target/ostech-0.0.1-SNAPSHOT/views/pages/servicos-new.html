@@ -1,0 +1,25 @@
+<div class="container">
+  <h1>Create a new Serviço</h1>
+
+  <form novalidate="novalidate" class="form-horizontal">
+    <div class="control-group">
+      <label class="control-label" for="descricao">Descrição:</label>
+
+      <div class="controls">
+        <input type="text" id="descricao" ng-model="servico.descricao" placeholder="Descrição"/>
+      </div>
+    </div>
+    <div class="control-group">
+      <label class="control-label" for="valor">Valor:</label>
+
+      <div class="controls">
+        <input type="text" id="valor" ng-model="servico.valorServico" placeholder="Valor"/>
+      </div>
+    </div>
+    <div class="control-group">
+      <div class="controls">
+        <a ng-click="createNewServico()" class="btn btn-small btn-primary">create new Serviço</a>
+      </div>
+    </div>
+  </form>
+</div>
